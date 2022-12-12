@@ -8,19 +8,25 @@ html,
 body,
 .wrapper {
   height: 100%;
-  margin: 0;
   padding: 0;
 }
 
 body {
   font-family: sans-serif;
+  margin: 0;
   background-color: #f9fbfd;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+  
 }
 
 header {
@@ -40,7 +46,8 @@ header {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
-}
+  align-items: center;
+  }
 
 .card-header::after {
   content: " ";
@@ -48,6 +55,7 @@ header {
   width: 100%;
   background: #e7e9eb;
   height: 2px;
+  align-items: center;
 }
 
 .card-body {
@@ -134,4 +142,22 @@ button[disabled] {
   .btn {
     font-size: 0.8rem;
   }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 1rem;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.character-amount-container {
+  display: flex;
+  align-items: center;
+}
+
+.number-input {
+  width: 3rem;
 }
