@@ -29,6 +29,12 @@ function passPrompt() {
   const ifSpecial = confirm('Click to confirm that you would like to use SPECIAL characters in your new password.'); 
 }};
 
+//create function that displays the new password in an array with the character types already declared
+function generatePass() {
+  
+}
+
+
 //function that generates the new password from the user with a btn
 function createPass() {
   const password = generatePass();
@@ -37,6 +43,8 @@ function createPass() {
   passwordVal.value = password;
 }
 
+//create btn activity for when password is ran by user
+const generateBtn = document.querySelector('#generate');
 generateBtn.addEventListener('click', createPass);
 
 
