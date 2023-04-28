@@ -7,18 +7,17 @@
 
 - [Usage]
 - [Credits]
-- [License]
 
 ## Usage
 
--Either use the slide bar or enter in how many digits you would like to have in your new password.
-
 -  Select which variables you would like to be used in your new password and check on the boxes that apply.
 
--Click on the button below in Red marked 'Generate Password" and your new password will display in the box.
+-Click on the button below in Red marked 'Generate Password", choose how you want your new password to render and your new password will display in the box.
 
--Repeat with different variables and combinations of digits until you get the password you desire.
 
 ## Credits
+Ryaan Mennemeier
 
-## License
+## Contact
+Email: kalpha1865@gmail.com
+Github: 

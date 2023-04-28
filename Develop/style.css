@@ -144,7 +144,7 @@ button[disabled] {
   }
 }
 
-.form {
+/* .form {
   display: grid;
   grid-template-columns: auto auto;
   row-gap: 1rem;
@@ -160,4 +160,4 @@ button[disabled] {
 
 .number-input {
   width: 3rem;
-}
+} */

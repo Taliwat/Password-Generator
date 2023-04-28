@@ -1,64 +1,46 @@
-const characterAmountRange = document.getElementById
-('characterAmountRange')
-const characterAmountNumber = document.getElementById
-('characterAmountNumber')
-const includeUppercaseElement = document.getElementById('includeUppercase')
-const includeNumbersElement = document.getElementById('includeNumbers')
-const includeSymbolsElement = document.getElementById('includeSymbols')
-const form = document.getElementById('passwordGeneratorForm')
-const passwordDisplay = document.getElementById('passwordDisplay')
+//establish originating variables needed for password chars
+const uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+const lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
+  
+//create function for the user to show prompts and options when creating password
+function passPrompt() {
+  const passLength = parseInt(prompt('For your new password how many characters would you like in it?'));
+  if (Number.isNaN(passLength)) {
+    alert('Your password length must be entered as a number!');
+  }; 
 
-const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
-const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57)
-const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90)
-const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
-    arrayFromLowToHigh(58, 64)  
-).concat(
-    arrayFromLowToHigh(91, 96)
-).concat(
-    arrayFromLowToHigh(123, 126)
-)
+//enter min and max lengths for the password
+  if (passLength < 8) {
+    alert('Your password must be at least 8 characters!');
+  };
 
-characterAmountNumber.addEventListener('input', syncCharacterAmount)
-characterAmountRange.addEventListener('input', syncCharacterAmount)
+  if (passLength > 128) {
+    alert('Your password must be less than 128 characters!');
+  
+//show confirm statements for when users enter in specific types of characters
+  const ifUppercase = confirm('Click to confirm that you would like to use UPPERCASE characters in your new password.');
+  
+  const ifLowercase = confirm('Click to confirm that you would like to use LOWERCASE characters in your new password.');
+  
+  const ifNumbers = confirm('Click to confirm that you would like to use NUMERIC characters in your new password.');
+  
+  const ifSpecial = confirm('Click to confirm that you would like to use SPECIAL characters in your new password.'); 
 
-form.addEventListener('submit' , e => {
-    e.preventDefault()
-    const characterAmount = characterAmountNumber.value
-    const includeUppercase = includeUppercaseElement.checked
-    const includeNumbers = includeNumbersElement.checked
-    const includeSymbols = includeSymbolsElement.checked 
-    const password = generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols)
-    passwordDisplay.innerText = password
-})
 
-function generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols) {
-    let charCodes = LOWERCASE_CHAR_CODES
-    if (includeUppercase) charCodes = charCodes.concat
-    (UPPERCASE_CHAR_CODES)
-    if (includeNumbers) charCodes = charCodes.concat
-    (NUMBER_CHAR_CODES)
-    if (includeSymbols) charCodes = charCodes.concat
-    (SYMBOL_CHAR_CODES)
-    
-    const passwordCharacters = []
-    for (let i = 0; i < characterAmount; i++) {
-        const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
-        passwordCharacters.push(String.fromCharCode(charCodes))
-    }
-    return passwordCharacters.join('')
-}
+};
 
-function arrayFromLowToHigh(low, high) {
-    const array = []
-    for (let i = low; i <= high; i++) {
-        array.push(i)
-    }
-    return array
-}
+//function that generates the new password from the user
+function generatePassword
 
-function syncCharacterAmount(e) {
-    const value = e.target.value
-    characterAmountNumber.value = value
-    characterAmountRange.value = value
-}
+
+
+
+
+
+
+
+
+
+
