@@ -27,18 +27,17 @@ function passPrompt() {
   const ifNumbers = confirm('Click to confirm that you would like to use NUMERIC characters in your new password.');
   
   const ifSpecial = confirm('Click to confirm that you would like to use SPECIAL characters in your new password.'); 
+}};
 
+//function that generates the new password from the user with a btn
+function createPass() {
+  const password = generatePass();
+  const passwordVal = document.querySelector('#password');
 
-};
+  passwordVal.value = password;
+}
 
-//function that generates the new password from the user
-function generatePassword
-
-
-
-
-
-
+generateBtn.addEventListener('click', createPass);
 
 
 
